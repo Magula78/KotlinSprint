@@ -1,5 +1,5 @@
 fun main(args:Array<String>){
-    var quantityInOrder: Int =75
+    var quantityInOrder: Int
     var totalOrder: Int
     var art1Order: Int = 15
     var art2Order: Int = 15
@@ -12,6 +12,7 @@ fun main(args:Array<String>){
     val art4: String = "Jacket"
     var price: Double
     var textIsGrateful:String = "Thanks of the order"
-
+    val quantityWorker: Int = 2000
+    println("Количество рабочих интернет магазина составляет $quantityWorker")
 
 }
