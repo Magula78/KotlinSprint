@@ -1,6 +1,6 @@
 package lesson2
 
-import java.math.RoundingMode
+
 
 fun main() {
     val sumContribution = 70000
