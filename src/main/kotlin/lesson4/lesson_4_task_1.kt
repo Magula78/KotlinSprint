@@ -1,5 +1,6 @@
 package lesson4
-fun main(){
+
+fun main() {
 
     val freeTodayTable = 13
     val freeTomorrowTable = 4
@@ -10,4 +11,5 @@ fun main(){
     println("Доступность столиков на сегодня:$ansverTodey, Доступность столиков на завтра $ansverTommorow")
 
 }
+
 const val TOTAL_TABLES = 13
