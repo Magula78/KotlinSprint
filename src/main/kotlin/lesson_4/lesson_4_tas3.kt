@@ -9,7 +9,9 @@ fun main() {
     var airHamidity: Int = 20
     var timeYearNow: String = "не зима"
 
-    val result = (weather == true) && (tentNow == true) && (airHamidity == 20) && (timeYearNow != "зима")
+    val result = (weather == true) && (tentNow == true) && (airHamidity == HAMIDITY) && (timeYearNow != WARM)
     println("Благоприятные ли условия сейчас для роста бобовых? Заключение: $result")
 
 }
+const val WARM = "зима"
+const val HAMIDITY = 20
