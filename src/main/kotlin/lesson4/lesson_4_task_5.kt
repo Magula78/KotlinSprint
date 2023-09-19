@@ -2,11 +2,11 @@ package lesson4
 
 fun main() {
     println("Имеется ли повреждения судна. введите:(имеются)(нет)(не значительные)")
-    var demageShip: String = readLine()!!
+    var demageShip: String = readln()
     println("Введите количество людей в экипаже на судне")
     var crewShip: Int = readLine()!!.toInt()
     println("Состояние погоды. Введите:(благоприятная) или (неблагоприятная)")
-    var weather: String = readLine()!!
+    var weather: String = readln()
     println("Введите количество ящиков провизии на корабле")
     var provitionShip: Int = readLine()!!.toInt()
 
@@ -17,10 +17,10 @@ fun main() {
     val conditionWeather2: Boolean = (weather == "благоприятная")
     val conclusionProvision: Boolean = (provitionShip > PROVISION)
 
-    val locked1: Boolean = (conditionDemageShip1 == true) && (conditionCrewShip == true) &&
+    val locked1: Boolean = (conditionDemageShip1) && (conditionCrewShip == true) &&
             (conditionWeather1 == true) && (conclusionProvision == true)
     val locked2: Boolean = ((conditionDemageShip1 == true) || (conditionDemageShip2 == true)) && (crewShip == MAX_CREW)
-            && (conditionWeather2 == true) && (provitionShip > PROVISION)
+            && (conditionWeather2 == true) && (conclusionProvision)
 
     println("Готовность карабля к плаванию (готов - true)/(не готов - false): $locked1")
     println("Альтернатива готовности карабля к плаванию (готов - true)/(не готов - false): $locked2")
