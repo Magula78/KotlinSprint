@@ -21,5 +21,5 @@ fun main(){
         println("Спасибо $login2 запомните ваш пороль $porol2, регистрация завершина - проходите на корабль HEART OF GOLD")
         }
     }
-const val LOGIN= "Zaphod"
-const val POROL= "PanGalactic"
+const val LOGIN = "Zaphod"
+const val POROL = "PanGalactic"
