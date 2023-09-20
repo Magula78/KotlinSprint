@@ -4,7 +4,7 @@ fun main() {
     println("Лоторея")
     println("Введите по запросу два любых числа в диапозоне от 1 до 100")
 
-    println("Введите первое число")
+    println("Введите первое  число")
     val attempt1 = readLine()?.toInt() ?: 0
     val attempt2 = readLine()?.toInt() ?: 0
     if ((attempt1 == ANSVER_1 || attempt1 == ANSVER_2) && (attempt2 == ANSVER_1 || attempt2 == ANSVER_2)) {
