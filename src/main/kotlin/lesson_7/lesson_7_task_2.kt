@@ -5,10 +5,10 @@ import kotlin.random.Random
 fun main() {
     for (i in 1..1000) {
         println("Код из СМС сообщения:")
-        var sms = Random.nextInt(1000, 9999)
+        var sms = (1000..9999).random()
         println(sms)
         println("Введите СМС в программу авторизации:")
-        var ansverSms = readLine()?.toInt() ?: 0
+        var ansverSms = readln().toInt()
 
         if (ansverSms == sms) {
             println("Добро пожаловать")
