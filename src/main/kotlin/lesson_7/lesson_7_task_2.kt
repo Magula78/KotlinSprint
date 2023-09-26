@@ -4,7 +4,7 @@ import kotlin.random.Random
 
 fun main() {
     for (i in 1..1000) {
-        println("Это код из СМС сообщения:")
+        println("Код из СМС сообщения:")
         var sms = Random.nextInt(1000, 9999)
         println(sms)
         println("Введите СМС в программу авторизации:")
