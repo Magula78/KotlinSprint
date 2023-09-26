@@ -16,7 +16,7 @@ fun main() {
     val range6 = 'a'..'z'
     val randomNum6 = range6.random()
 
-    val porol = "$randomNum1" + "$randomNum2" + "$randomNum3" + "$randomNum4" + "$randomNum5" + "$randomNum6"
-    println(porol)
+    val password = "$randomNum1$randomNum2$randomNum3$randomNum4$randomNum5$randomNum6"
+    println(password)
 
 }
