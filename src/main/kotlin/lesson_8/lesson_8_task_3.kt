@@ -4,9 +4,7 @@ fun main() {
     val indigrientsSup = arrayOf("вода", "кортошка", "макароны", "соль", "лук", "морковь", "зелень", "масло")
     println("Введите название индигриента в блюде: ")
     val findIndigrient = readln()
-    val search = indigrientsSup.contains(findIndigrient)
-
-    if (search == true) {
+    if (indigrientsSup.contains(findIndigrient)) {
         println("Индигриент ($findIndigrient) в рецепте блюда есть")
         return
     }
