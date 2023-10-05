@@ -4,7 +4,7 @@ fun main() {
     val indigrientsSup = mutableListOf("вода", "кортошка", "макароны")
     println("Блюдо имеет базовые ингредиенты:$indigrientsSup")
     println("Желаете  добавить еще ингредиенты?")
-    var ansver = readLine().toString()
+    var ansver = readln()
 
     if (ansver.contains("да", ignoreCase = true)) {
         println("Какой ингредиент вы хотите добваить ?")
