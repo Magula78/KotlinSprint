@@ -10,16 +10,16 @@ fun generationPassword() {
     println("Введите длину сиволов пороля для генерации")
     val digit = readln().toInt()
     val lengthPassword = digit
-    val random = Random
-    val symdols = "${'A'..'Z'}" + "${'a'..'z'}" + "123456789" + "!#$%'()*+,-./" + "" + " "
-    val bulder = StringBuilder()
+    val symbols1 = "!#$%'()*+,-./"
+    val digit1 = 1..9
+    var generationPassword = ""
 
+    for (i in 0 until lengthPassword - 2) {
 
-    for (i in 0 until lengthPassword) {
-        bulder.append(symdols[random.nextInt(symdols.length)])
+        generationPassword = generationPassword + symbols1.random() + digit1.random()
 
     }
-    println(bulder)
+    println(generationPassword)
 
 
 }
