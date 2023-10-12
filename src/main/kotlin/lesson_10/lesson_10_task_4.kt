@@ -4,52 +4,58 @@ import kotlin.random.Random
 
 fun main() {
 
-        println("Игра начата")
-    val counterVictoriesKiber = mutableListOf<Int>()
-    val counterVictoriesHuman= mutableListOf<Int>()
+    println("Игра начата")
+    var counterVictoriesKiber: Int = 0
+    var counterVictoriesHuman: Int = 0
     var counterRound = 0
 
     do {
-        val resultRound = round()
+        val resultRound = winnerHuman()
         counterRound++
         println("Желаете продолжить игру?")
-         var ansver = readln()
+        var ansver = readln()
 
-        if (resultRound==1){counterVictoriesHuman.add(1)}
-        if (resultRound==0){counterVictoriesKiber.add(1)}
+        if (resultRound == true) {
+            counterVictoriesHuman = counterVictoriesHuman + 1
+        }
+        if (resultRound == false) {
+            counterVictoriesKiber = counterVictoriesKiber + 1
+        }
 
-        val victoriesKiber = counterVictoriesKiber.sum()
-        val victoriesHuman = counterVictoriesHuman.sum()
+        var victoriesKiber = counterVictoriesKiber
+        var victoriesHuman = counterVictoriesHuman
         println("Рузультаты прошлой игры номер${counterRound}")
         println("Число побед раундов у KIBER: $victoriesKiber")
         println("Число побед раундов у HUMAN: $victoriesHuman")
-    }
-    while (ansver.contains("да", ignoreCase = true))
-println("Число сыгранных раундов: $counterRound")
-    }
+    } while (ansver.contains("да", ignoreCase = true))
+    println("Число сыгранных раундов: $counterRound")
+}
 
-fun round():Int {
-    var winnerHuman:Int=0
+fun winnerHuman(): Boolean {
+
     println("Ход игрока: Человек")
     val resultHuman = progresOfGame()
 
-   println("Ход игрока : Кибер ")
+    println("Ход игрока : Кибер ")
     val resulKiber = progresOfGame()
 
-    if (resultHuman > resulKiber) {
-       println("Победил Человек")
-        var winnerHuman:Int = 1
-        return winnerHuman
+    // if (resultHuman > resulKiber) {
+    return when {
+        resultHuman > resulKiber -> {
+            println("Победил Человек")
+            true
+        }
+
+        resultHuman < resulKiber -> {
+            println("Победил KIBER")
+            false
+        }
+
+        else -> {
+            println("НИЧЬЯ")
+            false
+        }
     }
-    if (resultHuman < resulKiber) {
-       println("Победил KIBER")
-        var winnerHuman:Int = 0
-        return winnerHuman
-    }
-    if (resultHuman == resulKiber) {
-        println("НЕЧЬЯ")
-    }
-        return winnerHuman
 }
 
 fun progresOfGame(): Int {
