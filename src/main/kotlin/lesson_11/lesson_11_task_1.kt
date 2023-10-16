@@ -22,13 +22,7 @@ fun main() {
         mail = "Vera@mail.ru",
 
         )
-    println(user1.id)
-    println(user1.name)
-    println(user1.password)
-    println(user1.mail)
+    println("ID пользователя:${user1.id} имя пользователя:${user1.name},пароль:${user1.password},email:${user1.mail}")
+    println("ID пользователя:${user2.id} имя пользователя:${user2.name},пароль:${user2.password},email:${user2.mail}")
 
-    println(user2.id)
-    println(user2.name)
-    println(user2.password)
-    println(user2.mail)
 }
