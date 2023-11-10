@@ -6,7 +6,7 @@ class Net(
     val nameNet: String,
     val specificityNet: String,
 ) {
-    var listUserNet = mutableMapOf<Int, String>()
+    val listUserNet = mutableMapOf<Int, String>()
 
     fun createUserId(): Int {
         val userId = Random.nextInt(1, 1000).toInt()
@@ -46,8 +46,8 @@ class Net(
 class UserNet(
     val userId: Int,
     val userName: String = "",
-    var datamessages: MutableMap<String, String>,
-    var listMessagesUser: MutableList<String> = mutableListOf(),
+    val datamessages: MutableMap<String, String>,
+    val listMessagesUser: MutableList<String> = mutableListOf(),
 )
 
 class MessageNet(
@@ -85,9 +85,9 @@ fun main() {
         var key2 = readln()
         while (key2.contains("ДА", ignoreCase = true)) {
 
-            var messageNew = fabricNet.createNewMessage(inListUsers, idUser, bob.message)
-            var currentMessageUser = fabricNet.addHistoryMessage(nameUser, messageNew, user1.datamessages)
-            var historyMessageUser = fabricNet.addHistoryListMessage(messageNew, user1.listMessagesUser)
+            val messageNew = fabricNet.createNewMessage(inListUsers, idUser, bob.message)
+            val currentMessageUser = fabricNet.addHistoryMessage(nameUser, messageNew, user1.datamessages)
+            val historyMessageUser = fabricNet.addHistoryListMessage(messageNew, user1.listMessagesUser)
 
             println("Текущее сообщение $nameUser: $currentMessageUser")
             println("История сообщений $nameUser: $historyMessageUser")
@@ -105,18 +105,18 @@ fun main() {
     println("Если вы хотите присоеденится ${fabricNet.nameNet} нажмите: 1, если хотите выйти из сети ${fabricNet.nameNet} нажмите: 2")
     var keyNet2 = readln().toInt()
     idUser = fabricNet.createUserId()
-    var nameUser2 = createUserName(piter.authorId, idUser)
+    val nameUser2 = createUserName(piter.authorId, idUser)
     while (keyNet2 == 1) {
 
         println("${nameUser2}, Добро пожаловать в ${fabricNet.nameNet}")
-        var inListUsers = fabricNet.addListUserNet(idUser, nameUser2, linkedMapOf())
+        val inListUsers = fabricNet.addListUserNet(idUser, nameUser2, linkedMapOf())
         println("Вы хотите написать сообщение в ${fabricNet.nameNet}? Напишите ДА или НЕТ")
         var key2 = readln()
         while (key2.contains("ДА", ignoreCase = true)) {
 
-            var messageNew = fabricNet.createNewMessage(inListUsers, idUser, piter.message)
-            var currentMessageUser = fabricNet.addHistoryMessage(nameUser2, messageNew, user2.datamessages)
-            var historyMessageUser = fabricNet.addHistoryListMessage(messageNew, user2.listMessagesUser)
+            val messageNew = fabricNet.createNewMessage(inListUsers, idUser, piter.message)
+            val currentMessageUser = fabricNet.addHistoryMessage(nameUser2, messageNew, user2.datamessages)
+            val historyMessageUser = fabricNet.addHistoryListMessage(messageNew, user2.listMessagesUser)
             println("Текущее сообщение $nameUser2: $currentMessageUser")
             println("История сообщений $nameUser2: $historyMessageUser")
             println("Вы хотите написать сообщение в ${fabricNet.nameNet}? Напишите ДА или НЕТ")
