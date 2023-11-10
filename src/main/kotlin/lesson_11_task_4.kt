@@ -66,7 +66,7 @@ fun main() {
 
     val burger1: Dishes = Dishes("", "бургер1", mutableListOf("мука", "вода", "соль"))
     val burger2: Dishes = Dishes("", "чизбургер", mutableListOf("мука", "вода", "соль"))
-    val burger3: Dishes = Dishes("", "бургер с грибами", mutableListOf("мука", "вода", "грибы", "соль"))
+    val burger3: Dishes = Dishes("", "бургер с грибами", mutableListOf("мука","вода", "грибы", "соль"))
     val pizza1: Dishes = Dishes("", "пицца 1", mutableListOf("мука", "вода", "соль"))
     val pizza2: Dishes = Dishes("", "пицца 2", mutableListOf("мука", "вода", "соль"))
     val pizza3: Dishes = Dishes("", "пицца 3", mutableListOf("мука", "вода", "соль"))
